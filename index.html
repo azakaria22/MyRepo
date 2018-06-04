@@ -5,12 +5,50 @@
 	<title>My First Project</title>
 	<script type="text/javascript" src="libs/jquery.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<input type="text" name="firstInputField" class="textField">
-	<button class="setData">Click to save text</button>
-	<button class="getData">Click get data</button>
+	<form class="container">
+		<div class="row">
+			<div class="col-sm-4 text-left">
+				<label>Snippet Name:</label> 
+				<input type="text" name="snippetName" class="textField">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<label>Snippet Text:</label>
+				<textarea class="form-control" placeholder="Start typing your snippet..." rows="5" cols="20" name="snippetText"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<button class="setData btn btn-primary">Save snippet</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<button class="getData btn btn-primary">Display all snippets</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="retrievedSnippets col-sm-4">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<input type="text" name="searchSnippetName" placeholder="seach for a snippet" id="searchSnippetName">
+				<button class="searchData btn btn-primary">Search</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="searchedSnippet col-sm-4">
+			</div>
+		</div>
 
+	</form>
+	
 	<div class="debug"></div>
 </body>
 </html>
